@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(path.join(__dirname + "public"))); //for serving static files
 
 app.get("/", function (req, res) {
-  const path = process.env.PATH_NAME;
+  const path = "assets/Introducing Windows 11.mp4";
   const stats = fs.statSync(path);
   const fileSize = stats.size;
   const range = req.headers.range;
